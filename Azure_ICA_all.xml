@@ -4684,7 +4684,20 @@
 			<SupportedExecutionModes>AzureServiceManagement</SupportedExecutionModes>
 			<TestID>AzureSetup_001</TestID>
 		</test>
-	
+		<test>
+      <testName>ICA-PERF-FLENT-TEST</testName>
+      <testScript>
+      </testScript>
+      <testScriptps1>ICA-PERF-FLENT-TEST.ps1</testScriptps1>
+      <setupType>M1S1</setupType>
+      <SupportedExecutionModes>AzureServiceManagement,AzureResourceManager</SupportedExecutionModes>
+      <SubtestValues>SOME,TEXTS,NEEDS,TO,BE,PRESENT,HERE,FOR,PRINTING,TEST,SUMMARY</SubtestValues>
+      <files>.\remote-scripts\azuremodules.sh</files>
+      <TestParameters>
+        <param>testDuration=300</param>
+      </TestParameters>
+      <Priority>P0</Priority>
+    </test>
 		<test>
 			<testName>BVT-VERIFY-DEPLOYMENT-PROVISION</testName>
 			<testScript></testScript>
@@ -8591,6 +8604,12 @@
 				<Name>ICA-BUILD-CUSTOM-VM-CAPTURE-VHD-ARM-LATEST</Name>
 			</test>
 		</Cycle>
+		<Cycle>
+      <cycleName>PERF-FLENT</cycleName>
+      <test>
+        <Name>ICA-PERF-FLENT-TEST</Name>
+      </test>
+    </Cycle>
 		
 	</testCycles>
 </config>
